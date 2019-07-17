@@ -1,13 +1,17 @@
 <template>
-  <Base :option="setOption()" :theme="'dark'" :config="{width: '500px', height: '500px' }" />
+  <BaseChart
+    :option="setOption()"
+    :theme="'dark'"
+    :config="{width: '500px', height: '500px' }"
+  />
 </template>
 
 <script>
-import Base from '../Base';
+import BaseChart from 'components/BaseChart';
 
 export default {
   components: {
-    Base,
+    BaseChart,
   },
   data() {
     return {}

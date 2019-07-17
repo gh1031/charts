@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
@@ -33,6 +34,7 @@ const config = {
   resolve: {
     extensions: ['.vue', '.js'],
     alias: {
+      components: path.resolve(__dirname, '../client/components'),
       client: path.resolve(__dirname, '../client'),
       pages: path.resolve(__dirname, '../client/pages'),
     }
@@ -80,6 +82,9 @@ const config = {
     }),
     new MiniCssExtractPlugin({
       filename: 'index.css',
+    }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
     }),
     new VueLoaderPlugin(),
   ]

@@ -8,6 +8,8 @@
     "dev": "webpack-dev-server --config ./build/webpack.config.js",
     "_build": "NODE_ENV=production webpack --config ./build/webpack.config.js",
     "build": "./build/deploy.sh",
+    "lint": "eslint --ext .js,.vue ./client",
+    "fix": "eslint --fix ./client",
     "server": "node ./server/bin/boot"
   },
   "keywords": [
@@ -18,6 +20,8 @@
   "dependencies": {
     "axios": "^0.19.0",
     "echarts": "^4.2.1",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
     "iview": "^3.4.2",
     "jest": "^24.8.0",
     "koa": "^2.7.0",
@@ -33,6 +37,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.12.0",
     "css-loader": "^3.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
@@ -46,5 +51,15 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "cross-env ESLINT_ENV=GIT eslint"
+    ]
   }
 }

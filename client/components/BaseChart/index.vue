@@ -1,17 +1,14 @@
 <template>
-  <div id="container" :style="config" />
+  <div
+    id="container"
+    :style="config"
+  />
 </template>
 
 <script>
 import * as Echarts from 'echarts';
 
 export default {
-  data() {
-    return {}
-  },
-  mounted() {
-    this.initialCharts();
-  },
   props: {
     theme: {
       type: String,
@@ -23,7 +20,14 @@ export default {
     },
     config: {
       type: Object,
+      default: () => {},
     }
+  },
+  data() {
+    return {}
+  },
+  mounted() {
+    this.initialCharts();
   },
   methods: {
     initialCharts() {

@@ -7,32 +7,39 @@
   >
     <template v-for="menu in menus">
       <Submenu 
+        v-if="menu.children && menu.children.length"
         :key="menu.id"
         :name="menu.id"
-        v-if="menu.children && menu.children.length"
       >
         <template slot="title">
           <Icon :type="menu.icon" />
           <span>{{ menu.title }}</span>
         </template>
-        <MenuItem
+        <router-link
           v-for="childMenu in menu.children"
           :key="childMenu.id"
-          :name="childMenu.id"
+          :to="childMenu.path"
         >
-          <router-link :to="childMenu.path">
+          <MenuItem
+            :name="childMenu.id"
+          >
             <Icon :type="childMenu.icon" />
-          </router-link>
-          {{ childMenu.title }}
-        </MenuItem>
+            <span>{{ childMenu.title }}</span>
+          </MenuItem>
+        </router-link>
       </Submenu>
 
-      <MenuItem v-else :key="menu.id">
-        <router-link :to="menu.path">
+      <router-link
+        v-else
+        :key="menu.id"
+        :to="menu.path"
+        class="link-style"
+      >
+        <MenuItem :name="menu.id">
           <Icon :type="menu.icon" />
           <span>{{ menu.title }}</span>
-        </router-link>
-      </MenuItem>
+        </MenuItem>
+      </router-link>
     </template>
   </Menu>
 </template>
@@ -47,7 +54,14 @@ export default {
     theme: {
       type: String,
       default: 'dark',
-    }
+    },
   },
 }
 </script>
+
+<style lang="less">
+.link-style {
+  width: 100%;
+  height: 100%;
+}
+</style>
