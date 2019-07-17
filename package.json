@@ -59,7 +59,7 @@
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "cross-env ESLINT_ENV=GIT eslint"
+      "cross-env ESLINT_ENV=GIT eslint ./client"
     ]
   }
 }
