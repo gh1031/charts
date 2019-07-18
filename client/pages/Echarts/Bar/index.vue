@@ -1,9 +1,54 @@
 <template>
-  <BaseChart
-    :option="setOption()"
-    :theme="'dark'"
-    :config="{width: '500px', height: '500px' }"
-  />
+  <div class="flex">
+    <BaseChart
+      container="Bar-theme-dark"
+      :option="getOption()"
+      :theme="'dark'"
+      :container-style="{width: '500px', height: '500px' }"
+    />
+    <BaseChart
+      container="Bar-theme-light"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+    <BaseChart
+      container="Bar-theme-yellow"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+    <BaseChart
+      container="Bar-theme-blue"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+    <BaseChart
+      container="Bar-theme-green"
+      :option="getOption()"
+      :theme="'dark'"
+      :container-style="{width: '500px', height: '500px' }"
+    />
+    <BaseChart
+      container="Bar-theme-red"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+    <BaseChart
+      container="Bar-theme-black"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+    <BaseChart
+      container="Bar-theme-white"
+      :option="getOption()"
+      :theme="'light'"
+      :initial-config="{ width: '500px', height: '500px'}"
+    />
+  </div>
 </template>
 
 <script>
@@ -20,10 +65,10 @@ export default {
     
   },
   methods: {
-    setOption() {
+    getOption() {
       return {
         title: {
-            text: 'ECharts 入门示例'
+            text: 'Basic'
         },
         tooltip: {},
         xAxis: {
@@ -42,5 +87,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.bar-box {
+  display: flex;
+}
 </style>

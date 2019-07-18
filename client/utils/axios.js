@@ -2,17 +2,14 @@ import axios from 'axios';
 import { Message } from 'iview';
 
 function handleRequestSuccess(successReq) {
-  console.log(successReq, 'successReq');
   return successReq;
-};
+}
 
 function handleRequestError(errorReq) {
-  console.log(errorReq, 'errorReq');
-  return Promise.reject(errorRes);
-};
+  return Promise.reject(errorReq);
+}
 
 function handleResponseSuccess(successRes) {
-  console.log(successRes, 'successRes');
   if (successRes.config.skip) {
     return successRes;
   }
@@ -26,7 +23,7 @@ function handleResponseSuccess(successRes) {
     })
     throw new Error(data.errorMsg || '未知错误！');
   }
-};
+}
 
 function handleResponseError(errorRes) {
   const { status } = errorRes.response;
@@ -45,7 +42,7 @@ function handleResponseError(errorRes) {
   }
 
   return Promise.reject(errorRes);
-};
+}
 
 axios.interceptors.request.use(handleRequestSuccess, handleRequestError);
 axios.interceptors.response.use(handleResponseSuccess, handleResponseError);

@@ -1,12 +1,16 @@
 <template>
   <div
-    id="container"
-    :style="config"
+    :id="container"
+    :style="containerStyle"
   />
 </template>
 
 <script>
 import * as Echarts from 'echarts';
+import {
+  // returnEmptyArray,
+  returnEmptyObject,
+} from 'client/utils/lang';
 
 export default {
   props: {
@@ -18,20 +22,29 @@ export default {
       type: Object,
       required: true,
     },
-    config: {
+    container: {
+      type: String,
+      required: true,
+    },
+    initialConfig: {
       type: Object,
-      default: () => {},
+      default: returnEmptyObject,
+    },
+    containerStyle: {
+      type: Object,
+      default: returnEmptyObject,
     }
-  },
-  data() {
-    return {}
   },
   mounted() {
     this.initialCharts();
   },
   methods: {
     initialCharts() {
-      this.charts = Echarts.init(document.getElementById('container'), this.theme);
+      this.charts = Echarts.init(
+        document.getElementById(this.container),
+        this.theme,
+        this.initialConfig
+      );
       this.charts.setOption(this.option)
     }
   },

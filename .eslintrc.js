@@ -6,7 +6,7 @@ module.exports = {
     node: true,
     browser: true,
   },
-  "extends": ['plugin:vue/recommended'],
+  "extends": ['eslint:recommended', 'plugin:vue/recommended'],
   "rules": {
     "no-console": isGit ? "error" : "warn"
   },

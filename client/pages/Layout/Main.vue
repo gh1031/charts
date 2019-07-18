@@ -61,7 +61,7 @@ export default {
   .layout-header-bar {
     line-height: 56px;
     background: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #909090;
 
     .menu-icon {
       margin: 0 24px;
@@ -69,10 +69,10 @@ export default {
   }
   .content {
     background: #fff;
-    box-shadow: 0 0 20px #909090;
+    box-shadow: 0 0 10px #909090;
     margin: 24px;
     padding: 24px;
-    height: calc(100vh - 56px - 40px);
+    // min-height: calc(100% - 56px - 40px);
   }
   .rotate-icon {
     transform: rotate(-90deg);
