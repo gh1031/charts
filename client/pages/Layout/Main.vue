@@ -19,6 +19,24 @@
       </Header>
       <Content class="content">
         <router-view />
+        <div class="config-box">
+          <div
+            class="config-btn"
+            @click="onToggle"
+          >
+            <span>配置</span>
+          </div>
+          <CreateDrawer
+            width="40%"
+            :show="show"
+            title="配置"
+          >
+            <ChartOption
+              :options="options"
+              :on-select="handleSelect"
+            />
+          </CreateDrawer>
+        </div>
       </Content>
     </Layout>
   </Layout>
@@ -26,14 +44,28 @@
 
 <script>
 import MyMenu from "./MyMenu";
-import { fetchMenus } from "client/api";
+import ChartOption from 'components/ChartOption';
+import CreateDrawer from 'components/CreateDrawer';
+import { fetchMenus, fetchOptions } from "client/api";
 
 export default {
-  components: { MyMenu },
+  components: {
+    MyMenu,
+    CreateDrawer,
+    ChartOption,
+  },
   data() {
     return {
       isCollapsed: false,
-      menus: []
+      menus: [],
+      show: false,
+      options: [{
+        title: 'title',
+      }, {
+        title: 'legend',
+      }, {
+        title: 'grid',
+      }],
     };
   },
   computed: {
@@ -43,12 +75,24 @@ export default {
     }
   },
   async mounted() {
-    const menus = await fetchMenus();
-    this.menus = menus;
+    try {
+      const menus = await fetchMenus();
+      this.menus = menus;
+    } catch(e) {}
+    try {
+      const options = await fetchOptions();
+      this.options = options;
+    } catch(e) {}
   },
   methods: {
     collapsedSider() {
       this.$refs.side.toggleCollapse();
+    },
+    onToggle() {
+      this.show = !this.show;
+    },
+    handleSelect(name) {
+      console.log(name);
     }
   }
 };
@@ -72,7 +116,30 @@ export default {
     box-shadow: 0 0 10px #909090;
     margin: 24px;
     padding: 24px;
-    // min-height: calc(100% - 56px - 40px);
+
+    .config-box {
+      position: fixed;
+      bottom: 50%;
+      right: 0;
+
+      .config-btn {
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        width: 40px;
+        padding: 8px;
+        z-index: 100;
+        cursor: pointer;
+        text-align: center;
+        background-color: #fff;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-right: none;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        transition: all ease-in-out 0.3s;
+      }
+    }
   }
   .rotate-icon {
     transform: rotate(-90deg);

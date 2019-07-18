@@ -4,49 +4,12 @@
       container="Bar-theme-dark"
       :option="getOption()"
       :theme="'dark'"
-      :container-style="{width: '500px', height: '500px' }"
+      :initial-config="{width: '300px', height: '300px' }"
     />
     <BaseChart
       container="Bar-theme-light"
       :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
-    />
-    <BaseChart
-      container="Bar-theme-yellow"
-      :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
-    />
-    <BaseChart
-      container="Bar-theme-blue"
-      :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
-    />
-    <BaseChart
-      container="Bar-theme-green"
-      :option="getOption()"
-      :theme="'dark'"
-      :container-style="{width: '500px', height: '500px' }"
-    />
-    <BaseChart
-      container="Bar-theme-red"
-      :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
-    />
-    <BaseChart
-      container="Bar-theme-black"
-      :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
-    />
-    <BaseChart
-      container="Bar-theme-white"
-      :option="getOption()"
-      :theme="'light'"
-      :initial-config="{ width: '500px', height: '500px'}"
+      :initial-config="{ width: '300px', height: '300px', renderer: 'svg' }"
     />
   </div>
 </template>
@@ -68,16 +31,24 @@ export default {
     getOption() {
       return {
         title: {
-            text: 'Basic'
+          text: 'Basic'
         },
         tooltip: {},
         xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+          data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
         },
-        yAxis: {},
+        yAxis: {
+          name: '销量',
+          max: 100,
+          splitNumber: 13,
+        },
         series: [{
             name: '销量',
             type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        }, {
+            name: '销量',
+            type: 'line',
             data: [5, 20, 36, 10, 10, 20]
         }]
       }

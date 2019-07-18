@@ -14,6 +14,9 @@ import {
   Icon,
   Sider,
   Message,
+  Button,
+  Drawer,
+  Input,
 } from 'iview';
 
 Vue.component('Layout', Layout);
@@ -23,6 +26,9 @@ Vue.component('MenuItem', MenuItem);
 Vue.component('Sider', Sider);
 Vue.component('Submenu', Submenu);
 Vue.component('Message', Message);
+Vue.component('Button', Button);
+Vue.component('Drawer',  Drawer);
+Vue.component('Input', Input);
 
 const app = new Vue({
   router,

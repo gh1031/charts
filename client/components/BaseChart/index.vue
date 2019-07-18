@@ -7,6 +7,7 @@
 
 <script>
 import * as Echarts from 'echarts';
+
 import {
   // returnEmptyArray,
   returnEmptyObject,
@@ -46,6 +47,12 @@ export default {
         this.initialConfig
       );
       this.charts.setOption(this.option)
+      console.log({
+        widht: this.charts.getWidth(),
+        height: this.charts.getHeight(),
+        dom: this.charts.getDom(),
+        options: this.charts.getOption()
+      })
     }
   },
 }
