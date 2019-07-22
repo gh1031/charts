@@ -5,6 +5,7 @@
     :width="width"
     :title="title"
     class="drawer"
+    @on-close="onClose"
   >
     <slot />
   </Drawer>
@@ -25,6 +26,10 @@ export default {
       type: [Number, String],
       default: 256,
     },
+    onClose: {
+      type: Function,
+      required: true,
+    }
   },
 }
 </script>

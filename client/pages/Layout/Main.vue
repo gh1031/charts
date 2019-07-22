@@ -29,6 +29,7 @@
           <CreateDrawer
             width="40%"
             :show="show"
+            :on-close="onToggle"
             title="配置"
           >
             <ChartOption
@@ -47,6 +48,8 @@ import MyMenu from "./MyMenu";
 import ChartOption from 'components/ChartOption';
 import CreateDrawer from 'components/CreateDrawer';
 import { fetchMenus, fetchOptions } from "client/api";
+import { mapActions, mapState } from 'vuex';
+
 
 export default {
   components: {
@@ -58,7 +61,6 @@ export default {
     return {
       isCollapsed: false,
       menus: [],
-      show: false,
       options: [{
         title: 'title',
       }, {
@@ -69,7 +71,9 @@ export default {
     };
   },
   computed: {
-    
+    ...mapState({
+      show: state => state.echartsConf,
+    }),
     rotateIcon() {
       return ["menu-icon", this.isCollapsed && "rotate-icon"];
     }
@@ -85,11 +89,11 @@ export default {
     } catch(e) {}
   },
   methods: {
+    ...mapActions({
+      onToggle: 'toggleEchartsConf'
+    }),
     collapsedSider() {
       this.$refs.side.toggleCollapse();
-    },
-    onToggle() {
-      this.show = !this.show;
     },
     handleSelect(name) {
       console.log(name);
