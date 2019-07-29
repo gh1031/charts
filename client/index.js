@@ -5,8 +5,6 @@ import store from './store';
 import 'iview/dist/styles/iview.css';
 import './style/global.less';
 
-console.log(store);
-
 // iview
 import {
   Layout,
@@ -19,6 +17,12 @@ import {
   Button,
   Drawer,
   Input,
+  Form,
+  FormItem,
+  Select,
+  Option,
+  RadioGroup,
+  Radio,
 } from 'iview';
 
 Vue.component('Layout', Layout);
@@ -31,6 +35,12 @@ Vue.component('Message', Message);
 Vue.component('Button', Button);
 Vue.component('Drawer',  Drawer);
 Vue.component('Input', Input);
+Vue.component('Form', Form);
+Vue.component('FormItem', FormItem);
+Vue.component('Select', Select);
+Vue.component('Option', Option);
+Vue.component('RadioGroup', RadioGroup);
+Vue.component('Radio', Radio);
 
 const app = new Vue({
   router,

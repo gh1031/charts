@@ -4,4 +4,4 @@ rm -rf dist
 
 npm run _build
 
-cp -r dist /usr/local/var/www
+cp -r dist guanhao@172.16.112.100:/usr/local/var/www

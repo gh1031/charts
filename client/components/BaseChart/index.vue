@@ -36,18 +36,30 @@ export default {
       default: returnEmptyObject,
     }
   },
+  watch: {
+    option: {
+      handler: function() {
+        this.initialCharts()
+      },
+      deep: true,
+    }
+  },
   mounted() {
     this.initialCharts();
   },
+  updated() {
+    },
   methods: {
     initialCharts() {
-      this.charts = Echarts.init(
-        document.getElementById(this.container),
-        this.theme,
-        this.initialConfig
-      );
-      this.charts.setOption(this.option)
+      this.$nextTick().then(() => {
+        this.charts = Echarts.init(
+          document.getElementById(this.container),
+          this.theme,
+          this.initialConfig
+        );
+        this.charts.setOption(this.option)
+      })
     }
-  },
+  }
 }
 </script>

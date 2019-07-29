@@ -1,21 +1,15 @@
 <template>
-  <div class="flex">
-    <BaseChart
-      container="Bar-theme-dark"
-      :option="getOption()"
-      :theme="'dark'"
-      :initial-config="{width: '300px', height: '300px' }"
-    />
-    <BaseChart
-      container="Bar-theme-light"
-      :option="getOption()"
-      :initial-config="{ width: '300px', height: '300px', renderer: 'svg' }"
-    />
-  </div>
+  <BaseChart
+    container="Bar-theme-dark"
+    :option="getOption"
+    :theme="'dark'"
+    :style="{width: '100%', height: '100%'}"
+  />
 </template>
 
 <script>
 import BaseChart from 'components/BaseChart';
+import { mapState } from 'vuex';
 
 export default {
   components: {
@@ -24,12 +18,14 @@ export default {
   data() {
     return {}
   },
-  methods: {
+  computed: {
+    ...mapState({
+      title: state => state.echartsConf.title
+    }),
     getOption() {
+      const { title } = this;
       return {
-        title: {
-          text: 'Basic'
-        },
+        title,
         tooltip: {},
         xAxis: {
           data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
@@ -49,7 +45,7 @@ export default {
             data: [5, 20, 36, 10, 10, 20]
         }]
       }
-    }
+    },
   },
 }
 </script>

@@ -72,7 +72,7 @@ export default {
   },
   computed: {
     ...mapState({
-      show: state => state.echartsConf,
+      show: state => state.isConfShow,
     }),
     rotateIcon() {
       return ["menu-icon", this.isCollapsed && "rotate-icon"];
@@ -95,8 +95,7 @@ export default {
     collapsedSider() {
       this.$refs.side.toggleCollapse();
     },
-    handleSelect(name) {
-      console.log(name);
+    handleSelect() {
     }
   }
 };
@@ -120,6 +119,7 @@ export default {
     box-shadow: 0 0 10px #909090;
     margin: 24px;
     padding: 24px;
+    min-height: calc(100% - 56px);
 
     .config-box {
       position: fixed;
