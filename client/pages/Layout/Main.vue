@@ -31,9 +31,10 @@
             :show="show"
             :on-close="onToggle"
             title="配置"
+            :mask="false"
           >
             <ChartOption
-              :options="options"
+              :configs="configs"
               :on-select="handleSelect"
             />
           </CreateDrawer>
@@ -50,7 +51,6 @@ import CreateDrawer from 'components/CreateDrawer';
 import { fetchMenus, fetchOptions } from "client/api";
 import { mapActions, mapState } from 'vuex';
 
-
 export default {
   components: {
     MyMenu,
@@ -61,13 +61,7 @@ export default {
     return {
       isCollapsed: false,
       menus: [],
-      options: [{
-        title: 'title',
-      }, {
-        title: 'legend',
-      }, {
-        title: 'grid',
-      }],
+      configs: [],
     };
   },
   computed: {
@@ -84,8 +78,8 @@ export default {
       this.menus = menus;
     } catch(e) {}
     try {
-      const options = await fetchOptions();
-      this.options = options;
+      const configs = await fetchOptions();
+      this.configs = configs;
     } catch(e) {}
   },
   methods: {
@@ -96,7 +90,7 @@ export default {
       this.$refs.side.toggleCollapse();
     },
     handleSelect() {
-    }
+    },
   }
 };
 </script>

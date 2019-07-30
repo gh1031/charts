@@ -1,0 +1,249 @@
+{
+  "title": "title",
+  "depth": 0,
+  "placeholder": "请设置主标题",
+  "children": [
+    {
+      "title": "id",
+      "depth": 1
+    },
+    {
+      "title": "show",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        {"label": "显示", "value": 1},
+        {"label": "隐藏", "value": 0}
+      ]
+    },
+    {
+      "title": "text",
+      "depth": 1
+    },
+    {
+      "title": "link",
+      "depth": 1,
+      "placeholder": "请输入主标题链接"
+    },
+    {
+      "title": "target",
+      "depth": 1,
+      "placeholder": "请输入主标题链接打开方式"
+    },
+    {
+      "title": "textStyle",
+      "depth": 1,
+      "children": [
+        {
+          "title": "color",
+          "depth": 2,
+          "id": "0-5-1"
+        },
+        {
+          "title": "fontStyle",
+          "depth": 2,
+          "id": "0-5-2"
+        },
+        {
+          "title": "fontWeight",
+          "depth": 2,
+          "id": "0-5-3"
+        },
+        {
+          "title": "fontFamily",
+          "depth": 2,
+          "id": "0-5-4"
+        },
+        {
+          "title": "fontSize",
+          "depth": 2,
+          "id": "0-5-5"
+        },
+        {
+          "title": "lineHeight",
+          "depth": 3,
+          "id": "0-5-6"
+        },
+        {
+          "title": "width",
+          "depth": 2,
+          "id": "0-5-7"
+        },
+        {
+          "title": "height",
+          "depth": 2,
+          "id": "0-5-8"
+        },
+        {
+          "title": "textBorderColor",
+          "depth": 2,
+          "id": "0-5-9"
+        },
+        {
+          "title": "textBorderWidth",
+          "depth": 2,
+          "id": "0-5-10"
+        },
+        {
+          "title": "textShadowColor",
+          "depth": 2,
+          "id": "0-5-11"
+        },
+        {
+          "title": "textShadowBlur",
+          "depth": 2,
+          "id": "0-5-12"
+        },
+        {
+          "title": "textShadowOffsetX",
+          "depth": 2,
+          "id": "0-5-13"
+        },
+        {
+          "title": "textShadowOffsetY",
+          "depth": 2,
+          "id": "0-5-14"
+        }
+      ]
+    },
+    {
+      "title": "subText",
+      "depth": 1
+    },
+    {
+      "title": "subLink",
+      "depth": 1
+    },
+    {
+      "title": "subtextStyle",
+      "depth": 1,
+      "children": [
+        {
+          "title": "color",
+          "depth": 2,
+          "id": "0-8-1"
+        },
+        {
+          "title": "fontStyle",
+          "depth": 2,
+          "id": "0-8-2"
+        },
+        {
+          "title": "fontWeight",
+          "depth": 2,
+          "id": "0-8-3"
+        },
+        {
+          "title": "fontFamily",
+          "depth": 2,
+          "id": "0-8-4"
+        },
+        {
+          "title": "fontSize",
+          "depth": 2,
+          "id": "0-8-5"
+        },
+        {
+          "title": "align",
+          "depth": 2,
+          "id": "0-8-56",
+          "type": "radio",
+          "options": [
+            {"label": "auto"},
+            {"label": "left"},
+            {"label": "center"},
+            {"label": "right"}
+          ]
+        },
+        {
+          "title": "verticalAlign",
+          "depth": 2,
+          "id": "0-8-7",
+          "type": "radio",
+          "options": [
+            {"label": "auto"},
+            {"label": "top"},
+            {"label": "middle"},
+            {"label": "bottom"}
+          ]
+        },
+        {
+          "title": "lineHeight",
+          "depth": 3,
+          "id": "0-8-8"
+        },
+        {
+          "title": "width",
+          "depth": 2,
+          "id": "0-8-9"
+        },
+        {
+          "title": "height",
+          "depth": 2,
+          "id": "0-8-10"
+        },
+        {
+          "title": "textBorderColor",
+          "depth": 2,
+          "id": "0-8-11"
+        },
+        {
+          "title": "textBorderWidth",
+          "depth": 2,
+          "id": "0-8-12"
+        },
+        {
+          "title": "textShadowColor",
+          "depth": 2,
+          "id": "0-8-13"
+        },
+        {
+          "title": "textShadowBlur",
+          "depth": 2,
+          "id": "0-8-14"
+        },
+        {
+          "title": "textShadowOffsetX",
+          "depth": 2,
+          "id": "0-8-15"
+        },
+        {
+          "title": "textShadowOffsetY",
+          "depth": 2,
+          "id": "0-8-16"
+        }
+      ]
+    },
+    {
+      "title": "textAlign",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        {"label": "auto"},
+        {"label": "left"},
+        {"label": "right"},
+        {"label": "center"}
+      ]
+    },
+    {
+      "title": "textVerticalAlign",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        {"label": "auto"},
+        {"label": "top"},
+        {"label": "bottom"},
+        {"label": "middle"}
+      ]
+    },
+    {
+      "title": "triggerEvent",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        {"label": "触发", "vlaue": 1},
+        {"label": "不触发", "vlaue": 0}
+      ]
+    }
+  ]
+}

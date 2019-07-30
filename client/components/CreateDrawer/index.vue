@@ -4,6 +4,7 @@
     :value="show"
     :width="width"
     :title="title"
+    :mask="mask"
     class="drawer"
     @on-close="onClose"
   >
@@ -29,6 +30,10 @@ export default {
     onClose: {
       type: Function,
       required: true,
+    },
+    mask: {
+      type: Boolean,
+      default: true,
     }
   },
 }

@@ -7,6 +7,7 @@
       <template v-if="type === 'input'">
         <Input
           v-model="formValue"
+          :placeholder="config.placeholder"
         />
       </template>
       <template v-if="type === 'select'">
@@ -14,10 +15,15 @@
       </template>
       <template v-if="type === 'radio'">
         <RadioGroup
-          v-for="option in options"
+          v-for="option in config.options"
           :key="option.value"
+          v-model="formValue"
         >
-          <Radio>{{ option.value }}</Radio>
+          <Radio
+            :label="option.value"
+          >
+            {{ option.label }}
+          </Radio>
         </RadioGroup>
       </template>
     </FormItem>
@@ -25,10 +31,14 @@
 </template>
 
 <script>
-import { returnEmptyArray } from 'client/utils/lang';
+// import { returnEmptyArray } from 'client/utils/lang';
 
 export default {
   props: {
+    gLabel: {
+      type: String,
+      default: '',
+    },
     pLabel: {
       type: String,
       default: '',
@@ -39,11 +49,11 @@ export default {
     },
     type: {
       type: String,
-      default: 'input',
+      default: 'input'
     },
-    options: {
-      type: Array,
-      default: returnEmptyArray,
+    config: {
+      type: Object,
+      required: true,
     }
   },
   data() {
@@ -53,13 +63,16 @@ export default {
     formValue: {
       get () {
         const { echartsConf } = this.$store.state;
+        if (this.gLabel) {
+          return echartsConf[this.gLabel][this.pLabel][this.label]
+        }
         if (this.pLabel) {
           return echartsConf[this.pLabel][this.label]
         }
         return echartsConf[this.label] || ''
       }, 
       set (value) {
-        this.$store.commit('changeEchartsConf', { pLabel: this.pLabel, label: this.label, value })
+        this.$store.commit('changeEchartsConf', { gLabel: this.gLabel, pLabel: this.pLabel, label: this.label, value })
       }
     }
   },

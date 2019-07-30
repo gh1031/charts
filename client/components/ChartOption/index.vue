@@ -1,37 +1,71 @@
 <template>
   <Menu
-    v-if="options.length"
-    :open-name="options.length && [options[0].id]"
+    v-if="configs.length"
+    :open-name="configs.length && [configs[0].id]"
     width="auto"
     @on-select="onSelect"
   >
-    <template v-for="option in options.slice(0, 1)">
+    <template v-for="config in configs">
+      <!-- 一级菜单含子菜单 -->
       <Submenu
-        v-if="option.children && option.children.length"
-        :key="option.id"
-        :name="option.title"
+        v-if="hasChildren(config.children)"
+        :key="config.id"
+        :name="config.title"
       >
+        <!-- 二级菜单 -->
         <template slot="title">
-          <span>{{ option.title }}</span>
+          <span>{{ config.title }}</span>
         </template>
-        <MenuItem
-          v-for="childOption in option.children"
-          :key="childOption.id"
-          :name="childOption.title"
-        >
-          <my-form
-            :p-label="option.title"
-            :label="childOption.title"
-          />
-        </MenuItem>
+        <!-- 二级菜单含子菜单 -->
+        <template v-for="childConfig in config.children">
+          <Submenu
+            v-if="hasChildren(childConfig.children)"
+            :key="childConfig.id"
+            :name="childConfig.title"
+          >
+            <!-- 三级菜单 -->
+            <template slot="title">
+              <span>{{ childConfig.title }}</span>
+            </template>
+            <MenuItem
+              v-for="grandsonConfig in childConfig.children"
+              :key="grandsonConfig.id"
+              :name="grandsonConfig.title"
+            >
+              <my-form
+                :g-label="config.title"
+                :p-label="childConfig.title"
+                :label="grandsonConfig.title"
+                :type="grandsonConfig.type"
+                :config="grandsonConfig"
+              />
+            </MenuItem>
+          </Submenu>
+          <MenuItem
+            v-else
+            :key="childConfig.id"
+            :name="childConfig.title"
+          >
+            <my-form
+              :p-label="config.title"
+              :label="childConfig.title"
+              :type="childConfig.type"
+              :config="childConfig"
+            />
+          </MenuItem>
+        </template>
       </Submenu>
+
+      <!-- 一级菜单 -->
       <MenuItem
         v-else
-        :key="option.id"
-        :name="option.title"
+        :key="config.id"
+        :name="config.title"
       >
         <my-form
-          :label="option.title"
+          :label="config.title"
+          :type="config.type"
+          :options="config.options"
         />
       </MenuItem>
     </template>
@@ -50,13 +84,19 @@ export default {
       type: Function,
       required: true,
     },
-    options: {
+    configs: {
       type: Array,
       required: true,
     }
   },
   mounted() {
+    console.log(this)
   },
+  methods: {
+    hasChildren(array) {
+      return array && array.length
+    }
+  }
 }
 </script>
 
