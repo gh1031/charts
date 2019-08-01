@@ -23,7 +23,7 @@ const config = {
     overlay: true,
     proxy: {
       '/proxy/': {
-        target: 'http://localhost:6666',
+        target: 'http://localhost:6060',
         changeOrigin: true,
         pathRewrite: {
           '^/proxy': "/"
