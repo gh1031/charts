@@ -7,7 +7,7 @@ router.get('/', async ctx => {
   ctx.body = 'welcome to charts service!'
 });
 
-router.use('/users', users.routes());
-router.use('/echart', echarts.routes());
+router.use('/proxy/users', users.routes());
+router.use('/proxy//echart', echarts.routes());
 
 module.exports = router;

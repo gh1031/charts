@@ -13,7 +13,7 @@ const config = {
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/',
+    publicPath: '.',
     filename: 'index.js',
   },
   devServer: {
@@ -23,7 +23,7 @@ const config = {
     overlay: true,
     proxy: {
       '/proxy/': {
-        target: 'http://localhost:7777',
+        target: 'http://localhost:6666',
         changeOrigin: true,
         pathRewrite: {
           '^/proxy': "/"
