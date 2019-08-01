@@ -1,0 +1,360 @@
+{
+  "title": "legend",
+  "depth": 0,
+  "children": [
+    {
+      "title": "type",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "plain", "value": "plain" },
+        { "label": "scroll", "value": "scroll" }
+      ]
+    },
+    {
+      "title": "id",
+      "depth": 1
+    },
+    {
+      "title": "show",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "single", "value": "single" },
+        { "label": "multiple", "value": "multiple" }
+      ]
+    },
+    {
+      "title": "zlevel",
+      "depth": 1
+    },
+    {
+      "title": "z",
+      "depth": 1
+    },
+    {
+      "title": "left",
+      "depth": 1
+    },
+    {
+      "title": "top",
+      "depth": 1
+    },
+    {
+      "title": "right",
+      "depth": 1
+    },
+    {
+      "title": "bottom",
+      "depth": 1
+    },
+    {
+      "title": "width",
+      "depth": 1
+    },
+    {
+      "title": "height",
+      "depth": 1
+    },
+    {
+      "title": "orient",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "horizontal", "value": "horizontal" },
+        { "label": "vertical", "value": "vertical" }
+      ]
+    },
+    {
+      "title": "align",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "auto", "value": "auto" },
+        { "label": "left", "value": "left" },
+        { "label": "right", "value": "right" }
+      ]
+    },
+    {
+      "title": "padding",
+      "depth": 1
+    },
+    {
+      "title": "itemGap",
+      "depth": 1
+    },
+    {
+      "title": "itemWidth",
+      "depth": 1
+    },
+    {
+      "title": "itemHeight",
+      "depth": 1
+    },
+    {
+      "title": "symbolKeepAspect",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "formatter",
+      "depth": 1
+    },
+    {
+      "title": "selectedMode",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "inactiveColor",
+      "depth": 1
+    },
+    {
+      "title": "selected",
+      "depth": 1
+    },
+    {
+      "title": "textStyle",
+      "depth": 1,
+      "children": [
+        {
+          "title": "color",
+          "depth": 2
+        },
+        {
+          "title": "fontStyle",
+          "depth": 2,
+          "type": "radio",
+          "options":[
+            {"label": "normal", "value": "normal"},
+            {"label": "italic", "value": "italic"},
+            {"label": "oblique", "value": "oblique"}
+          ]
+        },
+        {
+          "title": "fontWeight",
+          "depth": 2
+        },
+        {
+          "title": "fontFamily",
+          "depth": 2
+        },
+        {
+          "title": "fontSize",
+          "depth": 2
+        },
+        {
+          "title": "lineHeight",
+          "depth": 3
+        },
+        {
+          "title": "width",
+          "depth": 2
+        },
+        {
+          "title": "height",
+          "depth": 2
+        },
+        {
+          "title": "textBorderColor",
+          "depth": 2
+        },
+        {
+          "title": "textBorderWidth",
+          "depth": 2
+        },
+        {
+          "title": "textShadowColor",
+          "depth": 2
+        },
+        {
+          "title": "textShadowBlur",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetX",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetY",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "tooltip",
+      "depth": 1
+    },
+    {
+      "title": "data",
+      "depth": 1
+    },
+    {
+      "title": "backgroundColor",
+      "depth": 1
+    },
+    {
+      "title": "borderColor",
+      "depth": 1
+    },
+    {
+      "title": "borderWidth",
+      "depth": 1
+    },
+    {
+      "title": "borderRadius",
+      "depth": 1
+    },
+    {
+      "title": "shadowBlur",
+      "depth": 1
+    },
+    {
+      "title": "shadowColor",
+      "depth": 1
+    },
+    {
+      "title": "shadowOffsetX",
+      "depth": 1
+    },
+    {
+      "title": "shadowOffsetY",
+      "depth": 1
+    },
+    {
+      "title": "scrollDataIndex",
+      "depth": 1
+    },
+    {
+      "title": "pageButtonItemGap",
+      "depth": 1
+    },
+    {
+      "title": "pageButtonGap",
+      "depth": 1
+    },
+    {
+      "title": "pageButtonPosition",
+      "depth": 1
+    },
+    {
+      "title": "pageFormatter",
+      "depth": 1
+    },
+    {
+      "title": "pageIcons",
+      "depth": 1,
+      "children": [
+        {
+          "title": "horizontal",
+          "depth": 2
+        },
+        {
+          "title": "vertical",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "pageIconColor",
+      "depth": 1
+    },
+    {
+      "title": "pageIconInactiveColor",
+      "depth": 1
+    },
+    {
+      "title": "pageIconSize",
+      "depth": 1
+    },
+    {
+      "title": "pageTextStyle",
+      "depth": 1,
+      "children": [
+        {
+          "title": "color",
+          "depth": 2
+        },
+        {
+          "title": "fontStyle",
+          "depth": 2,
+          "type": "radio",
+          "options":[
+            {"label": "normal", "value": "normal"},
+            {"label": "italic", "value": "italic"},
+            {"label": "oblique", "value": "oblique"}
+          ]
+        },
+        {
+          "title": "fontWeight",
+          "depth": 2
+        },
+        {
+          "title": "fontFamily",
+          "depth": 2
+        },
+        {
+          "title": "fontSize",
+          "depth": 2
+        },
+        {
+          "title": "lineHeight",
+          "depth": 3
+        },
+        {
+          "title": "width",
+          "depth": 2
+        },
+        {
+          "title": "height",
+          "depth": 2
+        },
+        {
+          "title": "textBorderColor",
+          "depth": 2
+        },
+        {
+          "title": "textBorderWidth",
+          "depth": 2
+        },
+        {
+          "title": "textShadowColor",
+          "depth": 2
+        },
+        {
+          "title": "textShadowBlur",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetX",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetY",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "animation",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "animationDurationUpdate",
+      "depth": 1
+    }
+  ]
+}

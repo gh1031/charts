@@ -1,6 +1,11 @@
 const Base = require('./base');
 // const optionsField = require('../models/options');
 const titleField = require('../json/title.json');
+const legendField = require('../json/legend.json');
+const animation = require('../json/animation.json');
+const xAxis = require('../json/xAxis.json');
+const yAxis = require('../json/yAxis.json');
+const grid = require('../json/grid.json');
 
 class Echarts extends Base {
   async options(ctx) {
@@ -18,7 +23,14 @@ class Echarts extends Base {
     //   }
     //   return ret;
     // });
-    const ret = [titleField]
+    const ret = [
+      titleField,
+      legendField,
+      grid,
+      xAxis,
+      yAxis,
+      ...animation,
+    ]
     ctx.body = this.common.returnRes(ret);
   }
 }

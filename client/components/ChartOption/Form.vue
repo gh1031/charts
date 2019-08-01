@@ -7,7 +7,7 @@
       <template v-if="type === 'input'">
         <Input
           v-model="formValue"
-          :placeholder="config.placeholder"
+          :placeholder="config && config.placeholder"
         />
       </template>
       <template v-if="type === 'select'">
@@ -31,7 +31,6 @@
 </template>
 
 <script>
-// import { returnEmptyArray } from 'client/utils/lang';
 
 export default {
   props: {
@@ -63,16 +62,33 @@ export default {
     formValue: {
       get () {
         const { echartsConf } = this.$store.state;
+        let ret = null;
+        const stringify = (object) => {
+          if (ret instanceof Object) {
+            return JSON.stringify(ret)
+          }
+          return object
+        }
         if (this.gLabel) {
-          return echartsConf[this.gLabel][this.pLabel][this.label]
+          ret = echartsConf[this.gLabel][this.pLabel][this.label];
+          return stringify(ret);
         }
         if (this.pLabel) {
-          return echartsConf[this.pLabel][this.label]
+          ret = echartsConf[this.pLabel][this.label]
+          return stringify(ret);
         }
-        return echartsConf[this.label] || ''
+        return stringify(echartsConf[this.label] || '');
       }, 
       set (value) {
-        this.$store.commit('changeEchartsConf', { gLabel: this.gLabel, pLabel: this.pLabel, label: this.label, value })
+        this.$store.commit(
+          'changeEchartsConf',
+          {
+            gLabel: this.gLabel,
+            pLabel: this.pLabel,
+            label: this.label,
+            value 
+          }
+        )
       }
     }
   },

@@ -1,0 +1,39 @@
+[
+  {
+    "title": "animation",
+    "depth": 0,
+    "type": "radio",
+    "options": [
+      { "label": "true", "value": 1 },
+      { "label": "false", "value": 0 }
+    ]
+  },
+  {
+    "title": "animationThreshold",
+    "depth": 0
+  },
+  {
+    "title": "animationDuration",
+    "depth": 0
+  },
+  {
+    "title": "animationEasing",
+    "depth": 0
+  },
+  {
+    "title": "animationDelay",
+    "depth": 0
+  },
+  {
+    "title": "animationDurationUpdate",
+    "depth": 0
+  },
+  {
+    "title": "animationEasingUpdate",
+    "depth": 0
+  },
+  {
+    "title": "animationDelayUpdate",
+    "depth": 0
+  }
+]

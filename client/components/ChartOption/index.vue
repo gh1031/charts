@@ -66,6 +66,7 @@
           :label="config.title"
           :type="config.type"
           :options="config.options"
+          :config="config"
         />
       </MenuItem>
     </template>

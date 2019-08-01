@@ -1,0 +1,470 @@
+{
+  "title": "xAxis",
+  "depth": 0,
+  "children": [
+    {
+      "title": "id",
+      "depth": 1
+    },
+    {
+      "title": "show",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "gridIndex",
+      "depth": 1
+    },
+    {
+      "title": "position",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "top", "value": "top" },
+        { "label": "bottom", "value": "bottom" }
+      ]
+    },
+    {
+      "title": "offset",
+      "depth": 1
+    },
+    {
+      "title": "type",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "value", "value": "value" },
+        { "label": "category", "value": "category" },
+        { "label": "time", "value": "time" },
+        { "label": "log", "value": "log" }
+      ]
+    },
+    {
+      "title": "name",
+      "depth": 1
+    },
+    {
+      "title": "nameLocation",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "start", "value": "start" },
+        { "label": "middle", "value": "middle" },
+        { "label": "end", "value": "end" }
+      ]
+    },
+    {
+      "title": "nameTextStyle",
+      "depth": 1
+    },
+    {
+      "title": "nameGap",
+      "depth": 1
+    },
+    {
+      "title": "nameRotate",
+      "depth": 1
+    },
+    {
+      "title": "inverse",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "boundaryGap",
+      "depth": 1
+    },
+    {
+      "title": "min",
+      "depth": 1
+    },
+    {
+      "title": "max",
+      "depth": 1
+    },
+    {
+      "title": "scale",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "splitNumber",
+      "depth": 1
+    },
+    {
+      "title": "minInterval",
+      "depth": 1
+    },
+    {
+      "title": "maxInterval",
+      "depth": 1
+    },
+    {
+      "title": "interval",
+      "depth": 1
+    },
+    {
+      "title": "logBase",
+      "depth": 1
+    },
+    {
+      "title": "silent",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "triggerEvent",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "true", "value": 1 },
+        { "label": "false", "value": 0 }
+      ]
+    },
+    {
+      "title": "axisLine",
+      "depth": 1,
+      "children": [
+        {
+          "title": "show",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "onZero",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "symbol",
+          "depth": 2
+        },
+        {
+          "title": "symbolSize",
+          "depth": 2
+        },
+        {
+          "title": "symbolOffset",
+          "depth": 2
+        },
+        {
+          "title": "lineStyle",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "axisTick",
+      "depth": 1,
+      "children": [
+        {
+          "title": "show",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "alignWithLabel",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "interval",
+          "depth": 2
+        },
+        {
+          "title": "inside",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "length",
+          "depth": 2
+        },
+        {
+          "title": "lineStyle",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "axisLabel",
+      "depth": 1,
+      "children": [
+        {
+          "title": "show",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "interval",
+          "depth": 2
+        },
+        {
+          "title": "inside",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "rotate",
+          "depth": 2
+        },
+        {
+          "title": "margin",
+          "depth": 2
+        },
+        {
+          "title": "formatter",
+          "depth": 2
+        },
+        {
+          "title": "showMinLabel",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 },
+            { "label": "null", "value": "null" }
+          ]
+        },
+        {
+          "title": "color",
+          "depth": 2
+        },
+        {
+          "title": "fontStyle",
+          "depth": 2,
+          "type": "radio",
+          "options":[
+            {"label": "normal", "value": "normal"},
+            {"label": "italic", "value": "italic"},
+            {"label": "oblique", "value": "oblique"}
+          ]
+        },
+        {
+          "title": "fontWeight",
+          "depth": 2
+        },
+        {
+          "title": "fontFamily",
+          "depth": 2
+        },
+        {
+          "title": "fontSize",
+          "depth": 2
+        },
+        {
+          "title": "align",
+          "depth": 2,
+          "type": "radio",
+          "options":[
+            {"label": "left", "value": "left"},
+            {"label": "center", "value": "center"},
+            {"label": "right", "value": "right"}
+          ]
+        },
+        {
+          "title": "verticalAlign",
+          "depth": 2,
+          "type": "radio",
+          "options":[
+            {"label": "top", "value": "top"},
+            {"label": "middle", "value": "middle"},
+            {"label": "bottom", "value": "bottom"}
+          ]
+        },
+        {
+          "title": "lineHeight",
+          "depth": 2
+        },
+        {
+          "title": "backgroundColor",
+          "depth": 2
+        },
+        {
+          "title": "borderColor",
+          "depth": 2
+        },
+        {
+          "title": "borderWidth",
+          "depth": 2
+        },
+        {
+          "title": "borderRadius",
+          "depth": 2
+        },
+        {
+          "title": "padding",
+          "depth": 2
+        },
+        {
+          "title": "shadowBlur",
+          "depth": 1
+        },
+        {
+          "title": "shadowColor",
+          "depth": 1
+        },
+        {
+          "title": "shadowOffsetX",
+          "depth": 1
+        },
+        {
+          "title": "shadowOffsetY",
+          "depth": 1
+        },
+        {
+          "title": "width",
+          "depth": 2
+        },
+        {
+          "title": "height",
+          "depth": 2
+        },
+        {
+          "title": "textBorderColor",
+          "depth": 2
+        },
+        {
+          "title": "textBorderWidth",
+          "depth": 2
+        },
+        {
+          "title": "textShadowColor",
+          "depth": 2
+        },
+        {
+          "title": "textShadowBlur",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetX",
+          "depth": 2
+        },
+        {
+          "title": "textShadowOffsetY",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "data",
+      "depth": 1
+    },
+    {
+      "title": "axisPointer",
+      "depth": 1,
+      "children": [
+        {
+          "title": "show",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 },
+            { "label": "null", "value": "null" }
+          ]
+        },
+        {
+          "title": "type",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "line", "value": "line" },
+            { "label": "shadow", "value": "shadow" },
+            { "label": "none", "value": "none" }
+          ]
+        },
+        {
+          "title": "snap",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "z",
+          "depth": 2
+        },
+        {
+          "title": "label",
+          "depth": 2
+        },
+        {
+          "title": "lineStyle",
+          "depth": 2
+        },
+        {
+          "title": "shadowStyle",
+          "depth": 2
+        },
+        {
+          "title": "triggerTooltip",
+          "depth": 2,
+          "type": "radio",
+          "options": [
+            { "label": "true", "value": 1 },
+            { "label": "false", "value": 0 }
+          ]
+        },
+        {
+          "title": "value",
+          "depth": 2
+        }
+      ]
+    },
+    {
+      "title": "zlevel",
+      "depth": 1
+    },
+    {
+      "title": "z",
+      "depth": 1
+    }
+  ]
+}

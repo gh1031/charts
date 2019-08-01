@@ -1,0 +1,92 @@
+{
+  "title": "grid",
+  "depth": 0,
+  "children": [
+    {
+      "title": "id",
+      "depth": 1
+    },
+    {
+      "title": "show",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "false", "value": 0 },
+        { "label": "true", "value": 1 }
+      ]
+    },
+    {
+      "title": "zlevel",
+      "depth": 1
+    },
+    {
+      "title": "z",
+      "depth": 1
+    },
+    {
+      "title": "left",
+      "depth": 1
+    },
+    {
+      "title": "top",
+      "depth": 1
+    },
+    {
+      "title": "right",
+      "depth": 1
+    },
+    {
+      "title": "bottom",
+      "depth": 1
+    },
+    {
+      "title": "width",
+      "depth": 1
+    },
+    {
+      "title": "height",
+      "depth": 1
+    },
+    {
+      "title": "containerLable",
+      "depth": 1,
+      "type": "radio",
+      "options": [
+        { "label": "false", "value": 0 },
+        { "label": "true", "value": 1 }
+      ]
+    },
+    {
+      "title": "backgroundColor",
+      "depth": 1
+    },
+    {
+      "title": "borderColor",
+      "depth": 1
+    },
+    {
+      "title": "borderWidth",
+      "depth": 1
+    },
+    {
+      "title": "borderRadius",
+      "depth": 1
+    },
+    {
+      "title": "shadowBlur",
+      "depth": 1
+    },
+    {
+      "title": "shadowColor",
+      "depth": 1
+    },
+    {
+      "title": "shadowOffsetX",
+      "depth": 1
+    },
+    {
+      "title": "shadowOffsetY",
+      "depth": 1
+    }
+  ]
+}
