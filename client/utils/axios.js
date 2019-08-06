@@ -5,6 +5,10 @@ function handleRequestSuccess(successReq) {
   return successReq;
 }
 
+function isNotLogin(code) {
+  return code === -1;
+}
+
 function handleRequestError(errorReq) {
   return Promise.reject(errorReq);
 }
@@ -13,6 +17,7 @@ function handleResponseSuccess(successRes) {
   if (successRes.config.skip) {
     return successRes;
   }
+  console.log(successRes)
   const { data } = successRes;
   if (data && data.success) {
     return data.data;
@@ -21,6 +26,9 @@ function handleResponseSuccess(successRes) {
       content: data.errorMsg,
       duration: 3,
     })
+    if (isNotLogin(data.code)) {
+      window.location.replace('#/login')
+    }
     throw new Error(data.errorMsg || '未知错误！');
   }
 }

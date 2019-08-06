@@ -6,11 +6,12 @@
   "scripts": {
     "test": "jest",
     "dev": "webpack-dev-server --config ./build/webpack.config.js",
-    "_build": "NODE_ENV=production webpack --config ./build/webpack.config.js",
+    "_build": "npm run clear && NODE_ENV=production webpack --config ./build/webpack.config.js",
     "build": "./build/deploy.sh",
+    "clear": "rm -rf dist",
     "lint": "eslint --ext .js,.vue ./client",
     "fix": "eslint --fix ./client",
-    "server": "node ./server/bin/boot"
+    "server": "node --inspect ./server/bin/boot"
   },
   "keywords": [
     "koa"
@@ -25,6 +26,7 @@
     "iview": "^3.4.2",
     "jest": "^24.8.0",
     "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "log4js": "^4.5.1",
     "mongoose": "^5.6.4",

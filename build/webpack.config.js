@@ -10,10 +10,10 @@ const VueLoaderConfig = require('../client/vue-loader.config.js');
 const config = {
   mode: isProd ? 'production' : 'development',
   entry: path.resolve(__dirname, '../client/index.js'),
-  devtool: 'source-map',
+  devtool: !isProd && 'source-map',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '.',
+    publicPath: '/',
     filename: 'index.js',
   },
   devServer: {
@@ -67,7 +67,12 @@ const config = {
       },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
-        use: ['file-loader']
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]',
+          }
+        }]
       },
       {
         test: /\.svg$/,

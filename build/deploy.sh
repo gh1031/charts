@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf dist
+npm run clear
 
 npm run _build
 

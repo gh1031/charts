@@ -84,7 +84,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      onToggle: 'toggleEchartsConf'
+      onToggle: 'toggleEchartsConf',
+      fetchUserInfo: 'fetchUserInfo',
     }),
     collapsedSider() {
       this.$refs.side.toggleCollapse();

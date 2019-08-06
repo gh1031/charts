@@ -1,8 +1,18 @@
 class Common {
-  returnRes (data, errorCode = 0, errorMsg = '') {
+  verifyCookies(ctx) {
+    const username = ctx.cookies.get('username');
+    return new Promise(resolve => {
+      if (!username) {
+        resolve(false);
+      }
+      resolve(true);
+    })
+  }
+  
+  returnRes (data, code = 0, errorMsg = '') {
     return {
-      success: !errorCode,
-      errorCode,
+      success: !code,
+      code,
       data,
       errorMsg,
     }

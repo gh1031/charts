@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import EchartsLine from 'pages/Echarts/Line';
 import EchartsBar from 'pages/Echarts/Bar';
 import Main from 'pages/Layout/Main';
+import Login from 'pages/Login';
+import Registry from 'pages/Registry';
 
 Vue.use(VueRouter);
 
@@ -19,5 +21,11 @@ export default new VueRouter({
       path: 'echarts/bar',
       component: EchartsBar,
     },]
+  }, {
+    path: '/login',
+    component: Login,
+  }, {
+    path: '/registry',
+    component: Registry,
   }]
 })
