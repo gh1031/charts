@@ -31,6 +31,7 @@ class Echarts extends Base {
       yAxis,
       ...animation,
     ]
+    console.log('/options');
     ctx.body = this.common.returnRes(ret);
   }
 }

@@ -1,9 +1,8 @@
 const Base = require('./base');
-
+const db = require('../utils/db');
 class Users extends Base{
   async login(ctx) {
     const { request: { body } } = ctx;
-    console.log(ctx)
     ctx.cookies.set('username', body.username, {
       domain: 'localhost',
       path: '/',
@@ -11,14 +10,12 @@ class Users extends Base{
       expires: new Date().getTime(),
       overwrite: false,
     })
-
+    db.insert('users', { username: body.username })
     ctx.body = this.common.returnRes({
       username: body.username
     })
   }
   async menus(ctx) {
-    const isExist = await this.common.verifyCookies(ctx);
-    console.log(isExist, 'isExist')
     const data = [{
       title: 'Echarts',
       id: '1',
@@ -35,9 +32,7 @@ class Users extends Base{
         path: '/echarts/bar',
       }]
     }];
-    if (!isExist) {
-      return ctx.body = this.common.returnRes(null, -1, '请重新登陆！');
-    }
+    console.log('/menus');
     ctx.body = this.common.returnRes(data);
   }
 }
