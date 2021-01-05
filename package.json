@@ -16,7 +16,7 @@
   "author": "gh1031",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "echarts": "^4.2.1",
     "iview": "^3.4.2",
     "jest": "^24.8.0",
